@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Store - Checkout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#popular-products">Products</a></li>
+            <li><a href="#popular-categories">Categories</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+        <a href="index.html"><img src="logo.png" alt="Logo" class="logo"></a>
+        <a href="checkout.html" class="cart-icon">🛒</a>
+    </nav>
+</header>
+
+<main>
+    <h1>Checkout</h1>
+    
+    <section class="shopping-bag">
+        <h2>Your Shopping Bag</h2>
+        <div class="product-card">
+            <img src="https://picsum.photos/100" alt="Product Image">
+            <h3>Product Name</h3>
+            <p>$29.99</p>
+            <p>Color: Red</p>
+        </div>
+    </section>
+
+    <section class="personal-info">
+        <h2>Your Details</h2>
+        <form>
+            <input type="text" placeholder="First Name" required>
+            <input type="text" placeholder="Last Name" required>
+            <input type="text" placeholder="Street Address" required>
+            <input type="text" placeholder="Zip Code" required>
+            <input type="text" placeholder="City" required>
+            <button type="submit">Save</button>
+            <button type="button">Cancel</button>
+        </form>
+    </section>
+
+    <section class="delivery">
+        <h2>Delivery</h2>
+        <label><input type="radio" name="delivery"> Express Home Delivery</label>
+        <label><input type="radio" name="delivery"> Pickup Point</label>
+        <label><input type="radio" name="delivery"> Standard Home Delivery</label>
+    </section>
+
+    <section class="payment">
+        <h2>Payment</h2>
+        <form>
+            <input type="text" placeholder="Card Number" required>
+            <input type="text" placeholder="Expiry Date" required>
+            <input type="text" placeholder="CVC" required>
+            <button type="submit">Complete Purchase</button>
+            <label><input type="checkbox" required> I accept the terms</label>
+            <label><input type="checkbox"> Subscribe to newsletter</label>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <!-- Footer content (same as index.html) -->
+</footer>
+
+</body>
+</html>

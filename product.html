@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Store - Product</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Global Header -->
+<header class="global-header">
+    <div class="search-container">
+        <input type="text" placeholder="søk her">
+        <button type="submit" class="search-button">🔍</button>
+    </div>
+    <nav class="navigation">
+        <a href="#" class="menu-item">Hjem</a>
+        <a href="#most-popular-products" class="menu-item">Produkter</a>
+        <a href="#" class="logo">Logo</a>
+        <a href="#most-popular-categories" class="menu-item">Kategorier</a>
+        <a href="#footer" class="menu-item">Kontakt oss</a>
+    </nav>
+        <a href="user-profile.html" class="menu-icon">👤</a>
+        <a href="favorites.html" class="menu-icon">❤️</a>
+        <a href="checkout.html" class="menu-icon">🛒</a>
+</header>
+
+<main>
+    <div class="product-page">
+        <div class="breadcrumb">
+            <a href="#">Hjem</a> &gt; <a href="#">Kategori</a> &gt; <span>Produktnavn</span>
+        </div>
+        <div class="product-content">
+            <div class="product-gallery">
+                <div class="thumbnail-gallery">
+                    <img src="product.jpg" alt="Thumbnail 1">
+                    <img src="product.jpg" alt="Thumbnail 2">
+                    <img src="product.jpg" alt="Thumbnail 3">
+                </div>
+                <img src="product.jpg" alt="Product Image" class="main-image">
+            </div>
+            <div class="product-details">
+                <h1>Produktnavn</h1>
+                <a href="#">MERKENAVN</a>
+                <p class="price">5 195 kr inkl. mva.</p>
+                <p class="color">Farge: <span class="color-value">beige</span></p>
+                <select>
+                    <option>Velg størrelse</option>
+                    <option>Small</option>
+                    <option>Medium</option>
+                    <option>Large</option>
+                </select>
+                <button class="add-to-cart">Legg i handlekurv</button>
+                <div class="extra-info">
+                    <div class="info-item">
+                        <p>Materiale og vedlikehold</p>
+                        <span class="expand-icon">+</span>
+                    </div>
+                    <div class="info-item">
+                        <p>Produktdetaljer</p>
+                        <span class="expand-icon">+</span>
+                    </div>
+                    <div class="info-item">
+                        <p>Størrelsestabell</p>
+                        <span class="expand-icon">+</span>
+                    </div>
+                    <div class="info-item">
+                    </div>
+                </div>                
+                <div class="reviews">
+                    <p>Anmeldelser</p>
+                    <p>⭐⭐⭐⭐☆32</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</main>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-logo">Logo</div>
+        <div class="footer-description">
+            At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis.
+        </div>
+        <div class="footer-sections">
+            <div class="footer-contact">
+                <h4>KONTAKT</h4>
+                <p><span class="icon">📍</span><strong>Adresse:</strong> B R A Veien 4, 1757 Halden</p>
+                <p><span class="icon">📞</span><strong>Telefon:</strong> 69 60 80 00</p>
+                <p><span class="icon">📧</span><strong>E-post:</strong> halden@hlof.no</p>
+                <p><span class="icon">⏰</span><strong>Åpningstider:</strong> Stenger 15:00</p>
+            </div>
+            <div class="footer-navigation">
+                <h4>SNARVEIER</h4>
+                <a href="#">Produkter</a>
+                <a href="#">Kategorier</a>
+                <a href="#">Kontakt oss</a>
+            </div>
+            <div class="footer-social">
+                <h4>SOSIALE MEDIER</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
