@@ -10,9 +10,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 20px;
+    padding: 20px 120px;
     background-color: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     flex-wrap: wrap; /* Allow elements to wrap on smaller screens */
 }
 
@@ -167,7 +166,7 @@ body {
     background-image: url('bg.jpg');
     background-size: cover;
     background-position: center;
-    height: 400px;
+    height: 450px;
     width: 90%; /* Restrict the width to 90% of the screen */
     max-width: 1200px; /* Set a maximum width */
     margin: 40px auto; /* Center horizontally and add vertical spacing */
@@ -421,7 +420,7 @@ body {
 .category-row-1 {
     display: flex;
     gap: 15px;
-    height: 300px;
+  /*  height: 300px;*/
 }
 
 .category-row-2 {
@@ -441,17 +440,21 @@ body {
 /* Individual card styles */
 .cat-1 {
     flex: 1;
+    height:250px;
 }
 
 .cat-2 {
     flex: 1;
+    height:250px;
 }
 
 .cat-3 {
     flex: 1;
+    height: 450px !important;
 }
 
 .cat-4 {
+    margin-top: -200px;
     flex: 2;  /* Takes up 2/3 of the space */
 }
 
@@ -503,6 +506,7 @@ body {
 }
 
 .review-card {
+    width: 252px;
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
@@ -526,6 +530,19 @@ body {
     font-weight: bold;
     color: #333;
 }
+.center{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.line{
+    height: 2px;
+    width: 80%;
+    color:#666;
+    background-color: #666;
+    margin-bottom: 20px;
+}
 
 .rating {
     color: #000; /* Black color for stars */
@@ -535,7 +552,7 @@ body {
 
 .review-card p {
     font-size: 0.9em;
-    color: #666;
+    color: #000;
 }
 
 /* Responsive adjustments */
@@ -559,6 +576,7 @@ footer {
 }
 
 .footer-container {
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     text-align: center;
@@ -668,7 +686,7 @@ footer {
 }
 
 .breadcrumb {
-    width: 100%;
+    width: 72%;
     text-align: left;
     font-size: 14px;
     margin-bottom: 20px;
@@ -692,6 +710,7 @@ footer {
     align-items: center;
     max-width: 100%;
     gap: 20px;
+    width: 80%;
 }
 
 .product-gallery {
