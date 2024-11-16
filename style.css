@@ -241,13 +241,22 @@ body {
             z-index: 10;
         }
 
-        .banner-arrow-left {
-            left: 20px;
-        }
+.banner-arrow-left {
+    left: 20px;
+}
 
-        .banner-arrow-right {
-            right: 20px;
-        }
+.banner-arrow-right {
+    right: 20px;
+}
+
+/* Hide arrows on small screens */
+@media screen and (max-width: 768px) {
+    .banner-arrow-left,
+    .banner-arrow-right {
+        display: none;
+    }
+}
+
 
 
 /* Our Most Popular Products Section */
