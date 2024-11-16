@@ -10,7 +10,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 100px;
+    padding: 20px 150px;
     background-color: #fff;
     flex-wrap: wrap;
 }
@@ -141,7 +141,7 @@ body {
 
 .logo {
     font-weight: bold;
-    font-size: 1.5em;
+    font-size: 30px;
     text-decoration: none;
     color: #000;
 }
@@ -620,12 +620,13 @@ footer {
     background-color: #fff;
     color: #333;
     padding: 20px;
+    margin-bottom: 80px;
 }
 
 .footer-container {
     width: 100%;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 10px auto;
     text-align: center;
 }
 
@@ -1376,5 +1377,100 @@ input[type="text"] {
 @media (max-width: 768px) {
     .form-row {
         grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+.similar-products {
+    margin-top: 50px;
+    padding: 0 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.section-header span {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.see-more {
+    color: #666;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.product-grid-container {
+    overflow-x: auto;
+    /* scrollbar to be thin */
+    scrollbar-width: thin;
+    scrollbar-color: #f0f0f0 #fff;
+}
+
+.product-grid-container::-webkit-scrollbar {
+    width: 5px;
+}
+
+.product-grid {
+    display: flex;
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
+.product-card {
+    flex: 0 0 auto;
+    width: calc(25% - 15px);
+    min-width: 200px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.product-card h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.product-card .price {
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.product-card .rating {
+    font-size: 14px;
+    color: #666;
+}
+
+@media (max-width: 1024px) {
+    .product-card {
+        width: calc(33.33% - 13.33px);
+    }
+}
+
+@media (max-width: 768px) {
+    .product-card {
+        width: calc(50% - 10px);
+    }
+}
+
+@media (max-width: 480px) {
+    .product-card {
+        width: 100%;
     }
 }
