@@ -1203,6 +1203,7 @@ input::placeholder {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    padding-left: 0px;
 }
 
 .delivery-option {
