@@ -31,60 +31,61 @@
 </header>
 
 <main>
-    <div class="product-page">
-        <div class="breadcrumb">
+    <section class="product-page">
+        <nav class="breadcrumb">
             <a href="#">Hjem</a> &gt; <a href="#">Kategori</a> &gt; <span>Produktnavn</span>
-        </div>
-        <div class="product-content">
-            <div class="product-gallery">
-                <div class="thumbnail-gallery">
+        </nav>
+        <article class="product-content">
+            <figure class="product-gallery">
+                <section class="thumbnail-gallery">
                     <img src="product.jpg" alt="Thumbnail 1">
                     <img src="product.jpg" alt="Thumbnail 2">
                     <img src="product.jpg" alt="Thumbnail 3">
-                </div>
+                </section>
                 <img src="product.jpg" alt="Product Image" class="main-image">
-            </div>
-            <div class="product-details">
+            </figure>
+            <section class="product-details">
                 <h1>Produktnavn</h1>
                 <a href="#">MERKENAVN</a>
                 <p class="price">5 195 kr inkl. mva.</p>
                 <p class="color">Farge: <span class="color-value">beige</span></p>
-                <select>
-                    <option>Velg størrelse</option>
-                    <option>Small</option>
-                    <option>Medium</option>
-                    <option>Large</option>
-                </select>
-                <div class="add-to-cart-container">
+                <form>
+                    <label for="size">Velg størrelse</label>
+                    <select id="size">
+                        <option>Velg størrelse</option>
+                        <option>Small</option>
+                        <option>Medium</option>
+                        <option>Large</option>
+                    </select>
+                </form>
+                <section class="add-to-cart-container">
                     <button class="add-to-cart">Legg i handlekurv</button>
-                    <div class="heart-icon">
-                        <span>♡</span> <!-- Replace this with an actual icon if needed -->
-                    </div>
-                </div>
-                
-                <div class="extra-info">
-                    <div class="info-item">
+                    <aside class="heart-icon">
+                        <span>♡</span>
+                    </aside>
+                </section>
+                <section class="extra-info">
+                    <article class="info-item">
                         <p>Materiale og vedlikehold</p>
                         <span class="expand-icon">+</span>
-                    </div>
-                    <div class="info-item">
+                    </article>
+                    <article class="info-item">
                         <p>Produktdetaljer</p>
                         <span class="expand-icon">+</span>
-                    </div>
-                    <div class="info-item">
+                    </article>
+                    <article class="info-item">
                         <p>Størrelsestabell</p>
                         <span class="expand-icon">+</span>
-                    </div>
-                    <div class="info-item">
-                    </div>
-                </div>                
-                <div class="reviews">
+                    </article>
+                </section>
+                <footer class="reviews">
                     <p>Anmeldelser</p>
                     <p>⭐⭐⭐⭐☆32</p>
-                </div>
-            </div>
-        </div>
-    </div>
+                </footer>
+            </section>
+        </article>
+    </section>
+    
     
     <section class="similar-products">
         <h2 class="section-header">
