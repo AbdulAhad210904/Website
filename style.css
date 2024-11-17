@@ -873,7 +873,14 @@ select {
     width: 100%;
 }
 
+.add-to-cart-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between button and heart icon */
+}
+
 .add-to-cart {
+    flex: 1; /* Makes the button take up available space */
     background-color: black;
     color: white;
     padding: 10px;
@@ -881,13 +888,28 @@ select {
     border-radius: 5px;
     font-size: 14px;
     cursor: pointer;
-    width: 100%;
     text-align: center;
 }
 
 .add-to-cart:hover {
     background-color: #333;
 }
+
+.heart-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px; /* Fixed size for the heart icon container */
+    height: 40px; /* Fixed size for the heart icon container */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.heart-icon:hover {
+    border-color: black;
+}
+
 
 .extra-info {
     border-top: 1px solid #000;
