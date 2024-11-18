@@ -759,6 +759,13 @@ footer {
         text-align: left;
     }
 }
+@media (min-width: 1024px) {
+
+    .footer-navigation {
+        padding-left: 150px;
+    }
+    
+}
 
 /* Product Page */
 .product-page {
