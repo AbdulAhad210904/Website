@@ -1093,9 +1093,57 @@ select {
     display: block; /* Show content when button is expanded */
 }
 
+.reviews {
+    cursor: pointer;
+    padding: 10px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-top: 1px solid #ccc;
+}
 
+.reviews:hover {
+    background-color: #f1f1f1;
+}
 
+.review-content {
+    display: none; /* Initially hidden */
+    margin-top: 0px;
+    background-color: #fff;
+}
 
+.review-card2 h4 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.review-card2 p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+.review-card2 {
+    flex: 0 0 auto; /* Ensure cards don't shrink and have their own width */
+    width: 252px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    scroll-snap-align: start; /* Align cards when scrolling */
+}
+.reviews-footer {
+    background-color: #fff;
+    color: #333;
+    padding: 20px;
+    margin-bottom: 0px !important;
+}
+
+.reviews[aria-expanded="true"] + .review-content {
+    display: block; /* Show when aria-expanded is true */
+}
 
 
 

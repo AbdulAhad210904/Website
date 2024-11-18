@@ -208,10 +208,19 @@
                     </article>
                     
                 </section>
-                <footer class="reviews">
+                <section class="reviews" id="reviews-footer" aria-expanded="false" aria-controls="review-content">
                     <p>Anmeldelser</p>
                     <p>⭐⭐⭐⭐☆32</p>
-                </footer>
+                </section>
+                <section id="review-content" class="review-content">
+                    <div class="review-card2">
+                        <h4>Rober Labrador</h4>
+                        <p>2024-10-02</p>
+                        <p>⭐⭐⭐⭐☆</p>
+                        <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod.</p>
+                    </div>
+                </section>
+                
             </section>
         </article>
     </section>
@@ -352,6 +361,12 @@
             });
         });
     });
+    document.getElementById("reviews-footer").addEventListener("click", function () {
+    // Toggle aria-expanded attribute
+    const isExpanded = this.getAttribute("aria-expanded") === "true";
+    this.setAttribute("aria-expanded", !isExpanded);
+});
+
 </script>
 </body>
 </html>
