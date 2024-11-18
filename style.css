@@ -1592,3 +1592,29 @@ input[type="text"] {
         display:block;
     }
 }
+
+@media (max-width: 480px) {
+.product-gallery{
+    flex-direction: row;
+    margin:0;
+}
+.thumbnail-gallery{
+    flex-direction: column;
+}
+.main-image{
+    height:260px;
+    width:auto;
+}
+.similar-products{
+    padding:0;
+}
+.section-header{
+    padding:5px;
+}
+}
+
+@media (max-width: 420px) {
+    .main-image{
+        height:225px;
+    }
+}
