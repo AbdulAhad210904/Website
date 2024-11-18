@@ -931,6 +931,48 @@ select {
     border-color: black;
 }
 
+.heart-icon-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px; /* Fixed size for the heart icon container */
+    height: 30px; /* Fixed size for the heart icon container */
+    border: 1px solid #ddd; /* Subtle border color */
+    border-radius: 50%; /* Circular shape */
+    cursor: pointer;
+    background-color: white; /* Background for better visibility */
+    font-size: 18px; /* Slightly larger icon */
+    color: black; /* Default heart icon color */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    transition: all 0.3s ease; /* Smooth transition effect */
+}
+
+/* Hover effect for the heart icon */
+.heart-icon-circle:hover {
+    background-color: #f0f0f0; /* Light background on hover */
+    transform: scale(1.1); /* Slight enlargement */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+    color: red; /* Heart icon color on hover */
+    border: 1px solid #ccc; /* Slightly darker border on hover */
+}
+
+.heart-container {
+    position: absolute; /* Position the container relative to the product card */
+    top: 10px; /* Adjust vertical position */
+    right: 10px; /* Adjust horizontal position */
+    z-index: 2; /* Ensure it stays above other content */
+    display: flex; /* Ensure proper alignment */
+    align-items: center;
+    justify-content: center;
+}
+
+/* Ensure the heart icon is visible regardless of hover */
+.product-card {
+    position: relative; /* Make the card the parent of the absolute-positioned heart-container */
+    overflow: visible; /* Prevent clipping of absolute-positioned elements */
+}
+
+
 
 .extra-info {
     border-top: 1px solid #000;
