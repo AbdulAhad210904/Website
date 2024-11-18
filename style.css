@@ -640,7 +640,6 @@ body {
 }
 
 
-
 /* Footer Section */
 footer {
     background-color: #fff;
@@ -703,6 +702,10 @@ footer {
     margin-right: 5px;
 }
 
+.footer-navigation {
+    padding-left: 1px;
+}
+
 .footer-navigation a {
     color: #333;
     text-decoration: none;
@@ -746,6 +749,10 @@ footer {
 
     .footer-contact, .footer-navigation, .footer-social {
         flex: 1;
+    }
+
+    .footer-navigation {
+        padding-left: 80px;
     }
 
     .footer-logo, .footer-description {
