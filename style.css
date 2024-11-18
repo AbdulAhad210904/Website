@@ -1044,7 +1044,7 @@ select {
     }
     .thumbnail-gallery img {
         width: 127px;
-        height: 127px;
+        height: 197px;
         border-radius: 5px;
         cursor: pointer;
         opacity: 0.7;
@@ -1052,7 +1052,7 @@ select {
     
     .main-image {
         max-width: 400px;
-        height: auto;
+        height: 610px;
         border-radius: 5px;
         object-fit: cover;
     }
@@ -1063,6 +1063,35 @@ select {
     }
 }
 
+.info-content table {
+    width: 100%; /* Make the table take full width */
+    border-collapse: collapse; /* Remove spacing between cells */
+    margin-top: 10px;
+}
+
+.info-content th, .info-content td {
+    border: 1px solid #ddd; /* Add border to table cells */
+    padding: 8px; /* Add padding for readability */
+    text-align: center; /* Center align the text */
+    font-size: 14px; /* Adjust font size for better visibility */
+}
+
+.info-content th {
+    background-color: #f4f4f4; /* Light background for headers */
+    font-weight: bold;
+}
+
+.info-content tr:hover {
+    background-color: #f1f1f1; /* Highlight row on hover */
+}
+
+.info-content {
+    display: none; /* Hide content by default */
+}
+
+.info-item button[aria-expanded="true"] + .info-content {
+    display: block; /* Show content when button is expanded */
+}
 
 
 
