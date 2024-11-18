@@ -6,6 +6,37 @@
     <title>Online Store - Product</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
+    <style>
+        .info-item {
+            border-bottom: 1px solid #e0e0e0;
+            padding: 10px 0;
+        }
+        .info-item button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            align-items: center;
+            font-size: 1em;
+        }
+        .info-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .info-content.expanded {
+            max-height: 500px; /* Adjust as needed */
+            transition: max-height 0.5s ease-in;
+        }
+        .expand-icon {
+            transition: transform 0.3s ease;
+        }
+        .expanded .expand-icon {
+            transform: rotate(45deg);
+        }
+    </style>
 </head>
 <body>
 
@@ -66,16 +97,33 @@
                 </section>
                 <section class="extra-info">
                     <article class="info-item">
-                        <p>Materiale og vedlikehold</p>
-                        <span class="expand-icon">+</span>
+                        <button aria-expanded="false" aria-controls="material-content">
+                            <span>Materiale og vedlikehold</span>
+                            <span class="expand-icon">+</span>
+                        </button>
+                        <div id="material-content" class="info-content">
+                            <p>Dette produktet er laget av høykvalitets bomull og krever minimal vedlikehold. Vask på 30°C og heng til tørk for beste resultat.</p>
+                        </div>
                     </article>
                     <article class="info-item">
-                        <p>Produktdetaljer</p>
-                        <span class="expand-icon">+</span>
+                        <button aria-expanded="false" aria-controls="details-content">
+                            <span>Produktdetaljer</span>
+                            <span class="expand-icon">+</span>
+                        </button>
+                        <div id="details-content" class="info-content">
+                            <p>Dette produktet har en slank passform og er laget med fokus på komfort og stil. Det har forsterkede sømmer for økt holdbarhet.</p>
+                        </div>
                     </article>
                     <article class="info-item">
-                        <p>Størrelsestabell</p>
-                        <span class="expand-icon">+</span>
+                        <button aria-expanded="false" aria-controls="size-content">
+                            <span>Størrelsestabell</span>
+                            <span class="expand-icon">+</span>
+                        </button>
+                        <div id="size-content" class="info-content">
+                            <p>S: Bryst 88-93 cm, Midje 73-78 cm<br>
+                               M: Bryst 98-103 cm, Midje 83-88 cm<br>
+                               L: Bryst 108-113 cm, Midje 93-98 cm</p>
+                        </div>
                     </article>
                 </section>
                 <footer class="reviews">
@@ -173,7 +221,7 @@
         <section class="footer-logo">
             <a href="index.html">Logo</a>
         </section>
-        <section class="footer-description">
+                <section class="footer-description">
             At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis.
         </section>
         <nav class="footer-sections">
@@ -204,6 +252,24 @@
         </nav>
     </article>
 </footer>
-
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const infoItems = document.querySelectorAll('.info-item button');
+        
+        infoItems.forEach(item => {
+            item.addEventListener('click', function() {
+                const content = this.nextElementSibling;
+                const isExpanded = this.getAttribute('aria-expanded') === 'true';
+                
+                this.setAttribute('aria-expanded', !isExpanded);
+                content.classList.toggle('expanded');
+                
+                // Update the expand icon
+                const expandIcon = this.querySelector('.expand-icon');
+                expandIcon.textContent = isExpanded ? '+' : '−';
+            });
+        });
+    });
+</script>
 </body>
 </html>
