@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
 </head>
 <body>
@@ -31,37 +33,46 @@
 
 <!-- Main Content Area -->
 <main>
-    <section class="banner">
-        <div class="banner-slide active" style="background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb');">
-            <header class="banner-overlay">
-                <article class="banner-content">
-                    <h2>Et harum quidem rerum facilis est et expedita distinctio.</h2>
-                    <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus.</p>
-                    <a href="#" class="banner-button">LES MER</a>
-                </article>
-            </header>
+    <section class="banner swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide banner-slide" style="background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb');">
+                <header class="banner-overlay">
+                    <article class="banner-content">
+                        <h2>Et harum quidem rerum facilis est et expedita distinctio.</h2>
+                        <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus.</p>
+                        <a href="#" class="banner-button">LES MER</a>
+                    </article>
+                </header>
+            </div>
+            <div class="swiper-slide banner-slide" style="background-image: url('https://images.unsplash.com/photo-1469474968028-56623f02e42e');">
+                <header class="banner-overlay">
+                    <article class="banner-content">
+                        <h2>Sed ut perspiciatis unde omnis iste natus error sit voluptatem.</h2>
+                        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione.</p>
+                        <a href="#" class="banner-button">LES MER</a>
+                    </article>
+                </header>
+            </div>
+            <div class="swiper-slide banner-slide" style="background-image: url('https://images.unsplash.com/photo-1447752875215-b2761acb3c5d');">
+                <header class="banner-overlay">
+                    <article class="banner-content">
+                        <h2>At vero eos et accusamus et iusto odio dignissimos ducimus.</h2>
+                        <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit.</p>
+                        <a href="#" class="banner-button">LES MER</a>
+                    </article>
+                </header>
+            </div>
         </div>
-        <div class="banner-slide" style="background-image: url('https://images.unsplash.com/photo-1469474968028-56623f02e42e');">
-            <header class="banner-overlay">
-                <article class="banner-content">
-                    <h2>Sed ut perspiciatis unde omnis iste natus error sit voluptatem.</h2>
-                    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione.</p>
-                    <a href="#" class="banner-button">LES MER</a>
-                </article>
-            </header>
-        </div>
-        <div class="banner-slide" style="background-image: url('https://images.unsplash.com/photo-1447752875215-b2761acb3c5d');">
-            <header class="banner-overlay">
-                <article class="banner-content">
-                    <h2>At vero eos et accusamus et iusto odio dignissimos ducimus.</h2>
-                    <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit.</p>
-                    <a href="#" class="banner-button">LES MER</a>
-                </article>
-            </header>
-        </div>
-        <button class="banner-arrow banner-arrow-left">&#8592;</button>
-        <button class="banner-arrow banner-arrow-right">&#8594;</button>
+    
+        <!-- Add Navigation Buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    
+        <!-- Add Scrollbar -->
+        <div class="swiper-scrollbar"></div>
     </section>
+    
+    
 
     <!-- Our Most Popular Products Section -->
     <section id="most-popular-products">
@@ -300,33 +311,23 @@
 </footer>
 
 <script>
-    const slides = document.querySelectorAll('.banner-slide');
-    const prevButton = document.querySelector('.banner-arrow-left');
-    const nextButton = document.querySelector('.banner-arrow-right');
-    let currentSlide = 0;
-
-    function showSlide(index) {
-        slides[currentSlide].classList.remove('active');
-        slides[index].classList.add('active');
-        currentSlide = index;
-    }
-
-    function nextSlide() {
-        showSlide((currentSlide + 1) % slides.length);
-    }
-
-    function prevSlide() {
-        showSlide((currentSlide - 1 + slides.length) % slides.length);
-    }
-
-    prevButton.addEventListener('click', prevSlide);
-    nextButton.addEventListener('click', nextSlide);
-
-    // Optional: Add keyboard navigation
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'ArrowLeft') prevSlide();
-        if (e.key === 'ArrowRight') nextSlide();
+    const swiper = new Swiper('.swiper', {
+        loop: true, // Enables infinite scrolling
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        scrollbar: {
+            el: '.swiper-scrollbar',
+            draggable: true,
+        },
+        slidesPerView: 1, // Adjust for the visible slides
+        spaceBetween: 20, // Adds spacing between slides
+        autoplay: {
+            delay: 5000, // Optional: auto-slide every 5 seconds
+        },
     });
 </script>
+
 </body>
 </html>
