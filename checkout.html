@@ -16,14 +16,14 @@
     </div>
     <nav class="navigation">
         <a href="#" class="menu-item">Hjem</a>
-        <a href="#most-popular-products" class="menu-item">Produkter</a>
+        <a href="index.html#most-popular-products" class="menu-item">Produkter</a>
         <a href="index.html" class="logo">Logo</a>
-        <a href="#most-popular-categories" class="menu-item">Kategorier</a>
-        <a href="#footer" class="menu-item">Kontakt oss</a>
+        <a href="index.html#most-popular-categories" class="menu-item">Kategorier</a>
+        <a href="index.html#footer" class="menu-item">Kontakt oss</a>
     </nav>
     <div class="menu-icons-container">
-        <a href="user-profile.html" class="menu-icon">👤</a>
-        <a href="favorites.html" class="menu-icon">❤️</a>
+        <a href="#" class="menu-icon">👤</a>
+        <a href="#" class="menu-icon">❤️</a>
         <a href="checkout.html" class="menu-icon">🛒</a>
     </div>
     
@@ -39,7 +39,7 @@
             <h2 class="section-title">1. SHOPPINGBAGEN DIN</h2>
             <ul class="cart-items">
                 <li class="cart-item">
-                    <img src="product.jpg" alt="Product" class="cart-item-image">
+               <a href="product.html">   <img src="product.jpg" alt="Product" class="cart-item-image"></a>
                     <article class="cart-item-details">
                         <h3 class="product-name">PRODUCT NAME</h3>
                         <p class="product-price">Kr 1599</p>
@@ -47,89 +47,70 @@
                         <section class="quantity-selector">
                             <label>Størrelse
                                 <select>
-                                    <option>S</option>
+                                    <option>XS</option>
+                                    <option selected>S</option>
+                                    <option>M</option>
+                                    <option>L</option>
+                                    <option>XL</option>
                                 </select>
                             </label>
-                            <label>Antall
-                                <select>
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
-                                    <option>6</option>
-                                    <option>7</option>
-                                    <option>8</option>
-                                    <option>9</option>
-                                    <option>10</option>
-                                </select>
-                            </label>
-                        </section>
-                    </article>
-                    <aside class="cart-item-actions">
-                        <button class="wishlist-btn" aria-label="Add to wishlist">♡</button>
-                        <button class="remove-btn" aria-label="Remove item">🗑</button>
-                    </aside>
-                </li>
-                <li class="cart-item">
-                    <img src="product.jpg" alt="Product" class="cart-item-image">
-                    <article class="cart-item-details">
-                        <h3 class="product-name">PRODUCT NAME</h3>
-                        <p class="product-price">Kr 1599</p>
-                        <p class="product-color">Farge: Beige</p>
-                        <section class="quantity-selector">
-                            <label>Størrelse
-                                <select>
-                                    <option>S</option>
-                                </select>
-                            </label>
-                            <label>Antall
-                                <select>
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
-                                    <option>6</option>
-                                    <option>7</option>
-                                    <option>8</option>
-                                    <option>9</option>
-                                    <option>10</option>
-                                </select>
-                            </label>
-                        </section>
-                    </article>
-                    <aside class="cart-item-actions">
-                        <button class="wishlist-btn" aria-label="Add to wishlist">♡</button>
-                        <button class="remove-btn" aria-label="Remove item">🗑</button>
-                    </aside>
-                </li>
-                <li class="cart-item">
-                    <img src="product.jpg" alt="Product" class="cart-item-image">
-                    <article class="cart-item-details">
-                        <h3 class="product-name">PRODUCT NAME</h3>
-                        <p class="product-price">Kr 1599</p>
-                        <p class="product-color">Farge: Beige</p>
-                        <section class="quantity-selector">
-                            <label>Størrelse
-                                <select>
-                                    <option>S</option>
-                                </select>
-                            </label>
-                            <label>Antall
-                                <select>
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
-                                    <option>6</option>
-                                    <option>7</option>
-                                    <option>8</option>
-                                    <option>9</option>
-                                    <option>10</option>
+                            <label class="quantity-select-label">Antall
+                                <input id="counter" type="number" value="1" min="1" max="10" style="width: 40px; text-align: center;">
 
+                            </label>
+                        </section>
+                    </article>
+                    <aside class="cart-item-actions">
+                        <button class="wishlist-btn" aria-label="Add to wishlist">♡</button>
+                        <button class="remove-btn" aria-label="Remove item">🗑</button>
+                    </aside>
+                </li>
+                <li class="cart-item">
+                    <a href="product.html">   <img src="product.jpg" alt="Product" class="cart-item-image"></a>
+                    <article class="cart-item-details">
+                        <h3 class="product-name">PRODUCT NAME</h3>
+                        <p class="product-price">Kr 1599</p>
+                        <p class="product-color">Farge: Beige</p>
+                        <section class="quantity-selector">
+                            <label>Størrelse
+                                <select>
+                                    <option>XS</option>
+                                    <option selected>S</option>
+                                    <option>M</option>
+                                    <option>L</option>
+                                    <option>XL</option>
                                 </select>
+                            </label>
+                            <label class="quantity-select-label">Antall
+                                <input id="counter" type="number" value="1" min="1" max="10" style="width: 40px; text-align: center;">
+
+                            </label>
+                        </section>
+                    </article>
+                    <aside class="cart-item-actions">
+                        <button class="wishlist-btn" aria-label="Add to wishlist">♡</button>
+                        <button class="remove-btn" aria-label="Remove item">🗑</button>
+                    </aside>
+                </li>
+                <li class="cart-item">
+                    <a href="product.html">   <img src="product.jpg" alt="Product" class="cart-item-image"></a>
+                    <article class="cart-item-details">
+                        <h3 class="product-name">PRODUCT NAME</h3>
+                        <p class="product-price">Kr 1599</p>
+                        <p class="product-color">Farge: Beige</p>
+                        <section class="quantity-selector">
+                            <label>Størrelse
+                                <select>
+                                    <option>XS</option>
+                                    <option selected>S</option>
+                                    <option>M</option>
+                                    <option>L</option>
+                                    <option>XL</option>
+                                </select>
+                            </label>
+                            <label class="quantity-select-label">Antall
+                                <input id="counter" type="number" value="1" min="1" max="10" style="width: 40px; text-align: center;">
+
                             </label>
                         </section>
                     </article>
@@ -309,10 +290,21 @@
             <section class="footer-contact">
                 <h4>KONTAKT</h4>
                 <address>
-                    <p><span class="icon">📍</span><strong>Adresse:</strong> B R A Veien 4, 1757 Halden</p>
-                    <p><span class="icon">📞</span><strong>Telefon:</strong> 69 60 80 00</p>
-                    <p><span class="icon">📧</span><strong>E-post:</strong> halden@hlof.no</p>
-                    <p><span class="icon">⏰</span><strong>Åpningstider:</strong> Stenger 15:00</p>
+                    <div>
+                        <span class="icon">📍</span><strong>Adresse:</strong> B R A Veien 4, 1757 Halden
+                    </div>
+                    <br>
+                    <div>
+                        <span class="icon">📞</span><strong>Telefon:</strong> 69 60 80 00
+                    </div>
+                    <br>
+                    <div>
+                        <span class="icon">📧</span><strong>E-post:</strong> halden@hlof.no
+                    </div>
+                    <br>
+                    <div>
+                        <span class="icon">⏰</span><strong>Åpningstider:</strong> Stenger 15:00
+                    </div>
                 </address>
             </section>
             <section class="footer-navigation">
