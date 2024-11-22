@@ -403,9 +403,9 @@ body {
     text-align: center;
 }
 
-.product-card:hover {
+/* .product-card:hover {
     transform: scale(1.05);
-}
+} */
 
 
 /* Product Info */
@@ -700,7 +700,7 @@ footer {
     width: 100%;
     max-width: 1200px;
     margin: 10px auto;
-    text-align: center;
+    /* text-align: center; */
 }
 
 .footer-logo {
@@ -1077,6 +1077,8 @@ select {
 
     
     .product-gallery {
+        position:sticky;
+        top: 20px; /* Adjust based on how far from the top you want the gallery to stick */
         display: flex;
         flex-direction: row;
         align-items: flex-start;

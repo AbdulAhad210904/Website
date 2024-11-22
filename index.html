@@ -12,10 +12,10 @@
 <body>
 <!-- Global Header -->
 <header class="global-header">
-    <div class="search-container">
+    <nav class="search-container">
         <input type="text" placeholder="søk her">
         <button type="submit" class="search-button">🔍</button>
-    </div>
+    </nav>
     <nav class="navigation">
         <a href="#" class="menu-item">Hjem</a>
         <a href="#most-popular-products" class="menu-item">Produkter</a>
@@ -23,11 +23,11 @@
         <a href="#most-popular-categories" class="menu-item">Kategorier</a>
         <a href="#footer" class="menu-item">Kontakt oss</a>
     </nav>
-    <div class="menu-icons-container">
+    <nav class="menu-icons-container">
         <a href="#" class="menu-icon">👤</a>
         <a href="#" class="menu-icon">❤️</a>
         <a href="checkout.html" class="menu-icon">🛒</a>
-    </div>
+    </nav>
     
 </header>
 
@@ -282,25 +282,25 @@
             At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis.
         </section>
         <nav class="footer-sections">
-            <div class="row-footer">
+            <section class="row-footer">
             <section class="footer-contact">
                 <h4>KONTAKT</h4>
                 <address>
-                    <div>
+                    <section>
                         <span class="icon">📍</span><strong>Adresse:</strong> B R A Veien 4, 1757 Halden
-                    </div>
+                    </section>
                     <br>
-                    <div>
+                    <section>
                         <span class="icon">📞</span><strong>Telefon:</strong> 69 60 80 00
-                    </div>
+                    </section>
                     <br>
-                    <div>
+                    <section>
                         <span class="icon">📧</span><strong>E-post:</strong> halden@hlof.no
-                    </div>
+                    </section>
                     <br>
-                    <div>
+                    <section>
                         <span class="icon">⏰</span><strong>Åpningstider:</strong> Stenger 15:00
-                    </div>
+                    </section>
                 </address>
             </section>
             <section class="footer-navigation">
@@ -309,7 +309,7 @@
                 <a href="#">Kategorier</a>
                 <a href="#">Kontakt oss</a>
             </section>
-        </div>
+        </section>
             <section class="footer-social">
                 <h4>SOSIALE MEDIER</h4>
                 <nav class="social-icons">
@@ -324,22 +324,50 @@
 </footer>
 
 <script>
-    const swiper = new Swiper('.swiper', {
-        loop: true, // Enables infinite scrolling
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        scrollbar: {
-            el: '.swiper-scrollbar',
-            draggable: true,
-        },
-        slidesPerView: 1, // Adjust for the visible slides
-        spaceBetween: 20, // Adds spacing between slides
-        autoplay: {
-            delay: 5000, // Optional: auto-slide every 5 seconds
-        },
-    });
+let swiper;
+
+// Function to initialize or modify the Swiper based on screen width
+function updateSwiper() {
+    const screenWidth = window.innerWidth;
+
+    if (screenWidth < 768) {
+        if (swiper) {
+            // Disable autoplay and scrollbar for smaller screens
+            if(swiper.params.autoplay || swiper.params.scrollbar) {
+            swiper.params.autoplay = false;
+            swiper.params.scrollbar = false;
+            swiper.update(); // Update Swiper to apply changes
+            }
+        }
+    } else {
+        if (!swiper) {
+            // Initialize Swiper for larger screens
+            swiper = new Swiper('.swiper', {
+                loop: true,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                scrollbar: {
+                    el: '.swiper-scrollbar',
+                    draggable: true,
+                },
+                slidesPerView: 1,
+                spaceBetween: 20,
+                autoplay: {
+                    delay: 5000,
+                },
+            });
+        }
+    }
+}
+
+// Run the updateSwiper function on initial load
+updateSwiper();
+
+// Add a listener for window resize events
+window.addEventListener('resize', updateSwiper);
+
 </script>
 
 </body>
