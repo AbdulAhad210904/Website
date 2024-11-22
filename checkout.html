@@ -55,7 +55,7 @@
                                 </select>
                             </label>
                             <label class="quantity-select-label">Antall
-                                <input id="counter" type="number" value="1" min="1" max="10" style="width: 40px; text-align: center;">
+                                <input id="counter-1" type="number" value="1" min="1" max="10" style="width: 40px; text-align: center;">
 
                             </label>
                         </section>
@@ -82,7 +82,7 @@
                                 </select>
                             </label>
                             <label class="quantity-select-label">Antall
-                                <input id="counter" type="number" value="1" min="1" max="10" style="width: 40px; text-align: center;">
+                                <input id="counter-2" type="number" value="1" min="1" max="10" style="width: 40px; text-align: center;">
 
                             </label>
                         </section>
@@ -109,7 +109,7 @@
                                 </select>
                             </label>
                             <label class="quantity-select-label">Antall
-                                <input id="counter" type="number" value="1" min="1" max="10" style="width: 40px; text-align: center;">
+                                <input id="counter-3" type="number" value="1" min="1" max="10" style="width: 40px; text-align: center;">
 
                             </label>
                         </section>
@@ -173,26 +173,26 @@
                 <li class="delivery-option">
                     <input type="radio" name="delivery" id="express-home" class="delivery-radio">
                     <label for="express-home" class="delivery-label">
-                        <header class="delivery-header">
+                        <span class="delivery-header">
                             <span class="delivery-title">Express Hjemlevering</span>
                             <span class="delivery-price">59 kr <span class="delivery-icon">🚚</span></span>
-                        </header>
+                        </span>
                         <span class="delivery-time">3-4 Virkedager</span>
-                        <p class="delivery-details">
-                            bestill hverdag før 08:00* for levering neste arbeidsdag. Leveres hjem til deg før frokost 
+                        <span class="delivery-details">
+                            Bestill hverdag før 08:00* for levering neste arbeidsdag. Leveres hjem til deg før frokost 
                             mandag til lørdag. *For levering til postnummer 4000-7999 er leveringstiden 2 arbeidsdager, 
                             for postnummer 8000-9999 er leveringstiden 3 arbeidsdager.
-                        </p>
+                        </span>
                     </label>
                 </li>
         
                 <li class="delivery-option">
                     <input type="radio" name="delivery" id="express-pickup" class="delivery-radio">
                     <label for="express-pickup" class="delivery-label">
-                        <header class="delivery-header">
+                        <span class="delivery-header">
                             <span class="delivery-title">Ekspress Pakke til utleveringssted</span>
                             <span class="delivery-price">59 kr <span class="delivery-icon">📦</span></span>
-                        </header>
+                        </span>
                         <span class="delivery-time">1-3 Virkedager</span>
                     </label>
                 </li>
@@ -200,14 +200,14 @@
                 <li class="delivery-option">
                     <input type="radio" name="delivery" id="standard-delivery" class="delivery-radio">
                     <label for="standard-delivery" class="delivery-label">
-                        <header class="delivery-header">
+                        <span class="delivery-header">
                             <span class="delivery-title">Standard Hjemlevering</span>
                             <span class="delivery-price">Gratis <span class="delivery-icon">🎁</span></span>
-                        </header>
+                        </span>
                         <span class="delivery-time">5-8 Virkedager</span>
-                        <p class="delivery-details">
+                        <span class="delivery-details">
                             Leveres hjem til deg før frokost mandag til lørdag innen 4-7 hverdager.
-                        </p>
+                        </span>
                     </label>
                 </li>
             </ul>
@@ -226,7 +226,7 @@
                         <label class="form-group full-width">
                             <span>Kortnummer</span>
                             <input type="text" id="card-number" placeholder="342342****4435">
-                            <button type="button" class="copy-button">⎘</button>
+                            <span class="copy-button">⎘</span>
                         </label>
                         
                         <section class="form-row">
