@@ -436,7 +436,7 @@ body {
     align-items: center;
     gap: 5px;
     margin-top: 10px;
-    /* align-self:flex-start; */
+    align-self:flex-start;
     padding-left:0;
 }
 
@@ -1749,7 +1749,7 @@ input[type="number"]{
 }
 
 .product-card .rating {
-    font-size: 15px;
+    font-size: 12px;
     color: #666;
 }
 
@@ -1810,7 +1810,7 @@ input[type="number"]{
 }
 .main-image{
     height:360px;
-    width:260px;
+    width:241px;
 }
 .thumbnail-gallery img{
     height: 113px;
@@ -1826,6 +1826,6 @@ input[type="number"]{
 @media (max-width: 420px) {
     .main-image{
         height:360px;
-        width:225px;
+        width:156px;
     }
 }   
